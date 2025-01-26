@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
    <feature url="features/org.eclipse.elk.algorithms.feature_0.7.1.jar" id="org.eclipse.elk.algorithms.feature" version="0.7.1">
-      <category name="CapellaELKLayout"/>
+      <category name="rds.capella.elk.layout.patch"/>
    </feature>
    <feature url="features/org.eclipse.elk.feature_0.7.1.jar" id="org.eclipse.elk.feature" version="0.7.1">
-      <category name="CapellaELKLayout"/>
+      <category name="rds.capella.elk.layout.patch"/>
    </feature>
    <feature url="features/org.eclipse.elk.ui.feature_0.7.1.jar" id="org.eclipse.elk.ui.feature" version="0.7.1">
-      <category name="CapellaELKLayout"/>
-   </feature>
-   <feature url="features/org.eclipse.sirius.diagram.elk.feature_6.6.0.202111261321.jar" id="org.eclipse.sirius.diagram.elk.feature" version="6.6.0.202111261321">
-      <category name="CapellaELKLayout"/>
+      <category name="rds.capella.elk.layout.patch"/>
    </feature>
    <feature url="features/org.eclipse.elk.graphviz.feature_0.7.1.jar" id="org.eclipse.elk.graphviz.feature" version="0.7.1">
-      <category name="CapellaELKLayout"/>
+      <category name="rds.capella.elk.layout.patch"/>
    </feature>
-   <feature url="features/rds.capella.core.ui.patch.feature_1.0.4.202406281259.jar" id="rds.capella.core.ui.patch.feature" version="1.0.4.202406281259" patch="true">
-      <category name="CapellaELKLayout"/>
+   <feature url="features/rds.capella.core.ui.patch.feature_1.0.0.202501261122.jar" id="rds.capella.core.ui.patch.feature" version="1.0.0.202501261122" patch="true">
+      <category name="rds.capella.elk.layout.patch"/>
    </feature>
-   <category-def name="CapellaELKLayout" label="CapellaELKLayout"/>
+   <feature url="features/org.eclipse.sirius.diagram.elk.feature_7.1.0.202303020853.jar" id="org.eclipse.sirius.diagram.elk.feature" version="7.1.0.202303020853">
+      <category name="rds.capella.elk.layout.patch"/>
+   </feature>
+   <category-def name="rds.capella.elk.layout.patch" label="Capella ELK Layout Patch"/>
 </site>
