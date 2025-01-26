@@ -1,3 +1,5 @@
+# Installation guide
+
 This document contains instructions on how to install Eclipse Capella Diagram Layout Patch into Capella 6.1.0.
 
  You need to follow 

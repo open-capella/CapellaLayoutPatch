@@ -1,3 +1,4 @@
+# User guide
 
 The Eclipse Capella 6.1.0 Diagram Layout Patch adds capability to automatically layout some Capella diagrams using ELK layered algorithm. Diagrams with changed layout settings are data flow blank and architecture blank diagrams in SA, LA, and PA phases:
 
