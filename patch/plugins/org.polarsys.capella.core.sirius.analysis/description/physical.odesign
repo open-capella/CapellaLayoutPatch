@@ -725,7 +725,119 @@
       <concerns>
         <ownedConcernDescriptions name="pdfb.default" filters="//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Data%20Flow%20Blank']/@filters[name='hide.overlappedfunctional.chains.label.filter']"/>
       </concerns>
-      <layout xsi:type="description_2:CompositeLayout" direction="LeftToRight"/>
+      <layout xsi:type="description_2:CustomLayoutConfiguration" id="org.eclipse.elk.layered" label="ELK Layered" description="Layer-based algorithm provided by the Eclipse Layout Kernel. Arranges as many edges as possible into one direction by placing nodes into subsequent layers. This implementation supports different routing styles (straight, orthogonal, splines); if orthogonal routing is selected, arbitrary port constraints are respected, thus enabling the layout of block diagrams such as actor-oriented models or circuit schematics. Furthermore, full layout of compound graphs with cross-hierarchy edges is supported when the respective option is activated on the top level.">
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.direction">
+          <targets>PARENT</targets>
+          <value name="RIGHT"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.edgeRouting">
+          <targets>PARENT</targets>
+          <value name="ORTHOGONAL"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.layering.strategy">
+          <targets>PARENT</targets>
+          <value name="LONGEST_PATH"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.nodePlacement.networkSimplex.nodeFlexibility">
+          <targets>NODE</targets>
+          <value name="PORT_POSITION"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.nodePlacement.networkSimplex.nodeFlexibility.default">
+          <targets>PARENT</targets>
+          <value name="PORT_POSITION"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.nodePlacement.strategy">
+          <targets>PARENT</targets>
+          <value name="BRANDES_KOEPF"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumSetLayoutOption" id="org.eclipse.elk.nodeSize.constraints">
+          <targets>NODE</targets>
+          <values name="PORTS"/>
+          <values name="MINIMUM_SIZE"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumSetLayoutOption" id="org.eclipse.elk.nodeSize.options">
+          <targets>NODE</targets>
+          <values name="DEFAULT_MINIMUM_SIZE"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.spacing.nodeNode" value="20.0">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.spacing.portPort" value="20.0">
+          <targets>PARENT</targets>
+          <targets>NODE</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.edgeLabels.placement">
+          <targets>LABEL</targets>
+          <value name="HEAD"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.edgeLabels.sideSelection">
+          <targets>PARENT</targets>
+          <value name="SMART_UP"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.spacing.edgeLabel" value="1.0">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.spacing.edgeNode" value="20.0">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.spacing.edgeEdge" value="20.0">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:BooleanLayoutOption" id="org.eclipse.elk.layered.unnecessaryBendpoints">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.aspectRatio">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:BooleanLayoutOption" id="org.eclipse.elk.layered.feedbackEdges" value="true">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.hierarchyHandling">
+          <targets>NODE</targets>
+          <targets>PARENT</targets>
+          <value name="INCLUDE_CHILDREN"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.compaction.postCompaction.strategy">
+          <targets>PARENT</targets>
+          <value name="EDGE_LENGTH"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:BooleanLayoutOption" id="org.eclipse.elk.layered.crossingMinimization.semiInteractive" value="true">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:IntegerLayoutOption" id="org.eclipse.elk.layered.priority.straightness" value="212">
+          <targets>EDGE</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:IntegerLayoutOption" id="org.eclipse.elk.partitioning.partition">
+          <targets>NODE</targets>
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:BooleanLayoutOption" id="org.eclipse.elk.partitioning.activate">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.spacing.componentComponent" value="20.0">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:BooleanLayoutOption" id="org.eclipse.elk.layered.compaction.connectedComponents">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.considerModelOrder">
+          <targets>PARENT</targets>
+          <value name="NONE"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:IntegerLayoutOption" id="org.eclipse.elk.layered.layering.layerChoiceConstraint" value="-1">
+          <targets>NODE</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.layering.layerConstraint">
+          <targets>NODE</targets>
+          <value name="NONE"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:BooleanLayoutOption" id="org.eclipse.elk.layered.wrapping.multiEdge.improveWrappedEdges" value="true">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:IntegerLayoutOption" id="org.eclipse.elk.layered.priority.shortness" value="100">
+          <targets>EDGE</targets>
+        </layoutOptions>
+      </layout>
       <defaultLayer name="default">
         <nodeMappings name="PDFB_Node" preconditionExpression="false" labelDirectEdit="//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Data%20Flow%20Blank']/@defaultLayer/@toolSections.0/@ownedTools[name='node']" semanticCandidatesExpression="" createElements="false" documentation="precondition : (filter(&quot;ForkFunction&quot;)+filter(&quot;JoinFunction&quot;)+filter(&quot;DecisionFunction&quot;)).nSize > 0 &amp;&amp; eContainer(&quot;PhysicalFunctionPkg&quot;).eAllContents().filter(&quot;FunctionalExchange&quot;)[(source == current(1) &amp;&amp; $viewpoint.target.eAllContents().nContains(target)) || (target == current(1) &amp;&amp; $viewpoint.target.eAllContents().nContains(source))].nSize() > 0" domainClass="AbstractFunction">
           <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelExpression="service:capellaLabelService(view, diagram)" sizeComputationExpression="" resizeKind="NSEW">
@@ -2092,7 +2204,119 @@
       <concerns>
         <ownedConcernDescriptions name="default" filters="//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@filters[name='hide.simplified.diagram.based.component.exchanges.filter'] //@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@filters[name='hide.simplified.group.of.component.exchanges.filter'] //@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@filters[name='hide.simplified.oriented.grouped.component.exchanges.filter'] //@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@filters[name='hide.sequencing.information.filter'] //@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@filters[name='hide.overlappedfunctional.chains.label.filter'] //@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@filters[name='hide.overlappedphysical.paths.label.filter']"/>
       </concerns>
-      <layout xsi:type="description_2:CompositeLayout" direction="LeftToRight"/>
+      <layout xsi:type="description_2:CustomLayoutConfiguration" id="org.eclipse.elk.layered" label="ELK Layered" description="Layer-based algorithm provided by the Eclipse Layout Kernel. Arranges as many edges as possible into one direction by placing nodes into subsequent layers. This implementation supports different routing styles (straight, orthogonal, splines); if orthogonal routing is selected, arbitrary port constraints are respected, thus enabling the layout of block diagrams such as actor-oriented models or circuit schematics. Furthermore, full layout of compound graphs with cross-hierarchy edges is supported when the respective option is activated on the top level.">
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.direction">
+          <targets>PARENT</targets>
+          <value name="RIGHT"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.edgeRouting">
+          <targets>PARENT</targets>
+          <value name="ORTHOGONAL"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.layering.strategy">
+          <targets>PARENT</targets>
+          <value name="LONGEST_PATH"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.nodePlacement.networkSimplex.nodeFlexibility">
+          <targets>NODE</targets>
+          <value name="PORT_POSITION"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.nodePlacement.networkSimplex.nodeFlexibility.default">
+          <targets>PARENT</targets>
+          <value name="PORT_POSITION"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.nodePlacement.strategy">
+          <targets>PARENT</targets>
+          <value name="BRANDES_KOEPF"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumSetLayoutOption" id="org.eclipse.elk.nodeSize.constraints">
+          <targets>NODE</targets>
+          <values name="PORTS"/>
+          <values name="MINIMUM_SIZE"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumSetLayoutOption" id="org.eclipse.elk.nodeSize.options">
+          <targets>NODE</targets>
+          <values name="DEFAULT_MINIMUM_SIZE"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.spacing.nodeNode" value="20.0">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.spacing.portPort" value="20.0">
+          <targets>PARENT</targets>
+          <targets>NODE</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.edgeLabels.placement">
+          <targets>LABEL</targets>
+          <value name="HEAD"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.edgeLabels.sideSelection">
+          <targets>PARENT</targets>
+          <value name="SMART_UP"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.spacing.edgeLabel" value="1.0">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.spacing.edgeNode" value="20.0">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.spacing.edgeEdge" value="20.0">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:BooleanLayoutOption" id="org.eclipse.elk.layered.unnecessaryBendpoints">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.aspectRatio">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:BooleanLayoutOption" id="org.eclipse.elk.layered.feedbackEdges" value="true">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.hierarchyHandling">
+          <targets>NODE</targets>
+          <targets>PARENT</targets>
+          <value name="INCLUDE_CHILDREN"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.compaction.postCompaction.strategy">
+          <targets>PARENT</targets>
+          <value name="EDGE_LENGTH"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:BooleanLayoutOption" id="org.eclipse.elk.layered.crossingMinimization.semiInteractive" value="true">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:IntegerLayoutOption" id="org.eclipse.elk.layered.priority.straightness" value="212">
+          <targets>EDGE</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:IntegerLayoutOption" id="org.eclipse.elk.partitioning.partition">
+          <targets>NODE</targets>
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:BooleanLayoutOption" id="org.eclipse.elk.partitioning.activate">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:DoubleLayoutOption" id="org.eclipse.elk.spacing.componentComponent" value="20.0">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:BooleanLayoutOption" id="org.eclipse.elk.layered.compaction.connectedComponents">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.considerModelOrder">
+          <targets>PARENT</targets>
+          <value name="NONE"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:IntegerLayoutOption" id="org.eclipse.elk.layered.layering.layerChoiceConstraint" value="-1">
+          <targets>NODE</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:EnumLayoutOption" id="org.eclipse.elk.layered.layering.layerConstraint">
+          <targets>NODE</targets>
+          <value name="NONE"/>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:BooleanLayoutOption" id="org.eclipse.elk.layered.wrapping.multiEdge.improveWrappedEdges" value="true">
+          <targets>PARENT</targets>
+        </layoutOptions>
+        <layoutOptions xsi:type="description_2:IntegerLayoutOption" id="org.eclipse.elk.layered.priority.shortness" value="100">
+          <targets>EDGE</targets>
+        </layoutOptions>
+      </layout>
       <defaultLayer name="default">
         <nodeMappings name="PAB_PhysicalPathEnd" detailDescriptions="//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Path%20Description']/@defaultLayer/@toolSections.0/@ownedTools[name='Physical%20Path%20Description']" deletionDescription="//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@toolSections.0/@ownedTools[name='delete%20SF']" labelDirectEdit="//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@toolSections.0/@ownedTools[name='edit%20name']" createElements="false" domainClass="PhysicalPath">
           <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelExpression="aql:self.getPhysicalPathLabel(diagram)" sizeComputationExpression="1" resizeKind="NSEW" width="2" height="2">
