@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>rds.capella.ext</groupId>
+	<artifactId>rds.capella.ext.parent</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<tycho-version>4.0.7</tycho-version>
+		<targetplatformPath>file://D:/work/dev/rdscapellaext/rdscapellaext_git/releng/rds.capella.ext.target/btree.target-definition.target</targetplatformPath>
+		<packagedAddonName>RdsCapellaExt</packagedAddonName>
+	</properties>
+
+	<modules>
+		<module>../../src/plugins/rds.capella.m2doc.services</module>
+		<module>../../src/plugins/rds.capella.m2doc.templates</module>
+		<module>../../src/plugins/rds.capella.metamodel.services</module>
+		<module>../../src/plugins/rds.capella.m2doc.ui</module>
+		<module>../../src/plugins/rds.capella.m2doc.generate</module>		
+		<module>../../src/plugins/rds.capella.m2doc.commandline</module>		
+		<module>../../src/features/rds.capella.m2doc.feature</module>
+		
+
+		<module>../../src/plugins/rds.capella.fnc.specification</module>		
+		<module>../../src/plugins/rds.capella.fnc.specification.design</module>				
+		<module>../../src/plugins/rds.capella.fnc.statemachine.data</module>				
+		<module>../../src/plugins/rds.capella.fnc.statemachine.data.edit</module>				
+		<module>../../src/plugins/rds.capella.fnc.statemachine.model</module>				
+		<module>../../src/features/rds.capella.fnc.specification.feature</module>		
+		
+		
+		<module>../../src/plugins/rds.capella.editors.textreq</module>	
+		<module>../../src/plugins/rds.capella.req.ui</module>			
+		<module>../../src/plugins/ru.npcas.capella.design</module>						
+		<module>../../src/plugins/rds.capella.keys</module>				
+		<module>../../src/plugins/ru.rds.capella.validation</module>
+
+		<module>../../src/features/rds.capella.keys.feature</module>		
+		<module>../../src/features/ru.npcas.capella.feature</module>		
+		
+		<module>../../src/plugins/rds.capella.diagrams.gen</module>
+		<module>../../src/features/rds.capella.diagrams.gen.feature</module>				
+				
+		<module>../../patch/plugins/org.polarsys.capella.core.sirius.analysis</module>
+						
+		<module>../ru.npcas.capella.update.site</module>		
+	</modules>
+	
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>4.0.7</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-packaging-plugin</artifactId>
+				<version>4.0.7</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<id>package-feature</id>
+						<configuration>
+							<finalName>${project.artifactId}_${unqualifiedVersion}.${buildQualifier}</finalName>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+	
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>4.0.7</version>
+				<configuration>
+<!--					<resolver>p2</resolver>-->
+					<environments>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+					<target>
+						<file>./../../../releng/rds.capella.ext.target/rds.capella.ext.target-def.target</file>
+<!--					
+						<artifact>
+							<groupId>rds.capella.ext</groupId>
+							<artifactId>rds.capella.ext.target-def</artifactId>
+							<version>0.1.0-SNAPSHOT</version>
+							<classifier>../rds.capella.ext.target/rds.capella.ext.target-def</classifier>
+						</artifact>
+-->						
+					</target>
+				</configuration>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-p2-repository-plugin</artifactId>
+					<version>4.0.7</version>
+					<executions>
+						<execution>
+							<phase>package</phase>
+							<id>archive-repository</id>
+							<goals>
+								<goal>archive-repository</goal>
+							</goals>
+							<configuration>
+								<finalName>${packagedAddonName}-updateSite-${unqualifiedVersion}.${buildQualifier}</finalName>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>		
+	</build>
+</project>
