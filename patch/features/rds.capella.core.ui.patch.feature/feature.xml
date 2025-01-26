@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="rds.capella.core.ui.patch.feature"
+      label="rds.capella.core.ui.patch.feature"
+      version="1.0.0.qualifier"
+      provider-name="RDS">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import feature="org.polarsys.capella.core.ui.feature" version="6.1.0.202303291413" patch="true"/>
+   </requires>
+
+   <plugin
+         id="org.polarsys.capella.core.sirius.analysis"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

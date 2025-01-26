@@ -2,8 +2,6 @@
 <?pde version="3.8"?>
 <target name="rds.capella.ext.target-def">
 	<locations>
-		<location path="C:\Programs\capella-5.2.0\capella\plugins" type="Directory"/>
-		<location path="C:\Programs\capella-5.2.0\capella\dropins" type="Directory"/>
-		<location path="C:\Programs\capella-5.2.0\capella\dropins\STPA\plugins" type="Directory"/>
+		<location path="C:\work\atom\programs\capella-6.1.0.202303291413-clean\capella" type="Profile"/>
 	</locations>
 </target>
