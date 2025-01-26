@@ -16,8 +16,7 @@ To use ELK layouts for a diagram
 - open a diagram
 - press the button Arrange All on the digram toolbar
 
-![[images/UserGuide/ArrangeAllButton.png]]
-
+![](images/UserGuide/ArrangeAllButton.png)
 ## Known constrains of the ELK layouts
 
 The ELK layered algorithm does not work in some cases for Capella diagrams. For functional data flow diagrams it does not work when a functions chain is shown. For architecture blank diagrams diagrams it does not work when a physical path is shown.
