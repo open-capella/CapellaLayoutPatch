@@ -60,4 +60,5 @@ https://www.eclipse.org/downloads/download.php?file=/capella/studio/products/rel
 2. Set target platform 
 3. Open site.xml from rds.capella.patch.site and press Build All
 4. Export results into zip archive
+
 ![](images/DeveloperGuide/BuildUpdateSiteFiles.png)

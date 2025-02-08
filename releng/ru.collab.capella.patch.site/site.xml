@@ -12,10 +12,10 @@
    <feature url="features/org.eclipse.elk.graphviz.feature_0.7.1.jar" id="org.eclipse.elk.graphviz.feature" version="0.7.1">
       <category name="ru.colab.capella.elk.layout.patch"/>
    </feature>
-   <feature url="features/ru.colab.capella.core.ui.patch.feature_1.0.0.202502081901.jar" id="ru.colab.capella.core.ui.patch.feature" version="1.0.0.202502081901" patch="true">
+   <feature url="features/org.eclipse.sirius.diagram.elk.feature_7.1.0.202303020853.jar" id="org.eclipse.sirius.diagram.elk.feature" version="7.1.0.202303020853">
       <category name="ru.colab.capella.elk.layout.patch"/>
    </feature>
-   <feature url="features/org.eclipse.sirius.diagram.elk.feature_7.1.0.202303020853.jar" id="org.eclipse.sirius.diagram.elk.feature" version="7.1.0.202303020853">
+   <feature url="features/ru.colab.capella.core.ui.patch.feature_1.0.0.202502081948.jar" id="ru.colab.capella.core.ui.patch.feature" version="1.0.0.202502081948" patch="true">
       <category name="ru.colab.capella.elk.layout.patch"/>
    </feature>
    <category-def name="ru.colab.capella.elk.layout.patch" label="Capella ELK Layout Patch"/>
