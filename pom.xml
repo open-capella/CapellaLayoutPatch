@@ -22,11 +22,11 @@
        releng/fr.obeo.dsl.designer.sample.flow.parent.
   -->
 
-  <groupId>rds.capella.ext</groupId>
-  <artifactId>rds.capella.ext.top</artifactId>
+  <groupId>ru.colab.capella.ext</groupId>
+  <artifactId>ru.colab.capella.ext.top</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-    <module>releng/rds.capella.ext.parent</module>
+    <module>releng/ru.colab.capella.ext.parent</module>
   </modules>
 </project>

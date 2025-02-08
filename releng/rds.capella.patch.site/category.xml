@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature id="rds.capella.core.ui.patch.feature" patch="true">
-      <category name="rds.capella.layout.patch"/>
-   </feature>
-   <category-def name="rds.capella.layout.patch" label="Capella Diagram Layout Patch"/>
-</site>

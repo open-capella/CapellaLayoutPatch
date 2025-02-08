@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>rds.capella.ext</groupId>
-		<artifactId>rds.capella.ext.parent</artifactId>
+		<groupId>ru.colab.capella.ext</groupId>
+		<artifactId>ru.colab.capella.ext.parent</artifactId>
 		<version>0.1.0-SNAPSHOT</version>
-		<relativePath>../rds.capella.ext.parent</relativePath>
+		<relativePath>../ru.colab.capella.ext.parent</relativePath>
 	</parent>
 
-	<artifactId>rds.capella.patch.site</artifactId>
+	<artifactId>ru.colab.capella.patch.site</artifactId>
 	<packaging>eclipse-repository</packaging>
 	<version>1.0.0-SNAPSHOT</version>
 	<build>
@@ -55,13 +55,13 @@
 						</environment>
 					</environments>
 					<target>
-						<file>../rds.capella.ext.target/rds.capella.ext.target-def.target</file>
+						<file>../ru.colab.capella.ext.target/ru.colab.capella.ext.target-def.target</file>
 <!--					
 						<artifact>
-							<groupId>rds.capella.ext</groupId>
-							<artifactId>rds.capella.ext.target-def</artifactId>
+							<groupId>ru.colab.capella.ext</groupId>
+							<artifactId>ru.colab.capella.ext.target-def</artifactId>
 							<version>0.1.0-SNAPSHOT</version>
-							<classifier>../rds.capella.ext.target/rds.capella.ext.target-def</classifier>
+							<classifier>../ru.colab.capella.ext.target/ru.colab.capella.ext.target-def</classifier>
 						</artifact>
 -->						
 					</target>

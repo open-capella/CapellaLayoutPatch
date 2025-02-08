@@ -3,23 +3,23 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>rds.capella.ext</groupId>
-	<artifactId>rds.capella.ext.parent</artifactId>
+	<groupId>ru.colab.capella.ext</groupId>
+	<artifactId>ru.colab.capella.ext.parent</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<properties>
 		<tycho-version>4.0.7</tycho-version>
-		<targetplatformPath>file://C:/work/atom/source/CapellaLayoutPatch/releng/rds.capella.ext.target/rds.capella.ext.target-def.target</targetplatformPath>
+		<targetplatformPath>file://C:/work/atom/source/CapellaLayoutPatch/releng/ru.colab.capella.ext.target/ru.colab.capella.ext.target-def.target</targetplatformPath>
 		<packagedAddonName>RdsCapellaExt</packagedAddonName>
 	</properties>
 
 	<modules>
 	
 	
-		<module>../../patch/features/rds.capella.core.ui.patch.feature</module>	
+		<module>../../patch/features/ru.colab.capella.core.ui.patch.feature</module>	
 		<module>../../patch/plugins/org.polarsys.capella.core.sirius.analysis</module>
-		<module>../rds.capella.patch.site</module>		
+		<module>../ru.colab.capella.patch.site</module>		
 	</modules>
 	
 
@@ -65,13 +65,13 @@
 						</environment>
 					</environments>
 					<target>
-						<file>./../../../releng/rds.capella.ext.target/rds.capella.ext.target-def.target</file>
+						<file>./../../../releng/ru.colab.capella.ext.target/ru.colab.capella.ext.target-def.target</file>
 <!--					
 						<artifact>
-							<groupId>rds.capella.ext</groupId>
-							<artifactId>rds.capella.ext.target-def</artifactId>
+							<groupId>ru.colab.capella.ext</groupId>
+							<artifactId>ru.colab.capella.ext.target-def</artifactId>
 							<version>0.1.0-SNAPSHOT</version>
-							<classifier>../rds.capella.ext.target/rds.capella.ext.target-def</classifier>
+							<classifier>../ru.colab.capella.ext.target/ru.colab.capella.ext.target-def</classifier>
 						</artifact>
 -->						
 					</target>
